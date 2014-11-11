@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/player_mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+
+    <com.ESHW4.VideoPlayer.VideoSurfaceView
+        android:id="@+id/videoSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/player_linearlayout_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/layout_background"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/player_ibtn_folder"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_folder" />
+
+            <com.ESHW4.VideoPlayer.MarqueeTextView
+                android:id="@+id/player_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:background="@color/transparent"
+                android:textSize="24sp"
+                android:text="video name" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/player_view_navigator"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:fitsSystemWindows="true"
+            android:layout_weight="5"/>
+
+        <com.ESHW4.VideoPlayer.CustomSeekBar
+            android:id="@+id/player_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/layout_background"
+            android:layout_weight="0.5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical" 
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/player_linearlayout_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/layout_background" >
+
+                <ImageButton
+                    android:id="@+id/player_ibtn_lock"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:src="@android:drawable/ic_lock_lock" />
+
+                <ImageButton
+                    android:id="@+id/player_ibtn_previous"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:src="@android:drawable/ic_media_previous" />
+
+                <ImageButton
+                    android:id="@+id/player_ibtn_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:src="@android:drawable/ic_media_play" />
+
+                <ImageButton
+                    android:id="@+id/player_ibtn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:src="@android:drawable/ic_media_next" />
+
+                <ImageButton
+                    android:id="@+id/player_ibtn_extend"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_extend" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/player_ibtn_unlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@android:drawable/ic_lock_lock" />
+
+</RelativeLayout>
